@@ -5,9 +5,10 @@ document.getElementById("taskinput");
 const tasklist = 
 document.getElementById("tasklist");
 
-addButton.addEventListener("click", function () {
+addButton.addEventListener("click",
+function () {
     const newTask = 
-    document.createElement("li");
+document.createElement("li");
     newTask.textContent = 
 taskinput.value;
 
@@ -15,12 +16,16 @@ taskinput.value;
     document.createElement("button");
     deleteButton.textContent =
 "Delete";
- deleteButton.addEvenetListener("click,
+
+const deleteButton =
+document.createElement("button");
+deleteButton.textContent = "Delete";
+
+deleteButton.addEventListener("click" ,
 function () {
-        newTask.remove();
+    newTask.remove();
 });
-    
-    newTask.appendChild(deleteButton);
+     newTask.appendChild(deleteButton);
 
      tasklist.appendChild(newTask);
 
